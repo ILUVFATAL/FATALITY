@@ -33,8 +33,7 @@ local Window = Rayfield:CreateWindow({
 })
  local MainTab = Window:CreateTab("Pets", 4483362458) -- Title, Image
 local MainSection = Tab:CreateSection("Main")
-
-local Button = Tab:CreateButton({
+local Button = MainTab:CreateButton({
    Name = "Farm",
    Callback = function(function sendPetsToBreakables()
     -- Assuming 'pets' is a table containing all your pet objects
