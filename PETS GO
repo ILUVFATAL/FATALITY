@@ -33,36 +33,5 @@ local Window = Rayfield:CreateWindow({
 })
  local MainTab = Window:CreateTab("Pets", 4483362458) -- Title, Image
 local MainSection = Tab:CreateSection("Main")
-local Button = MainTab:CreateButton({
-   Name = "Farm",
-   Callback = function(function sendPetsToBreakables()
-    -- Assuming 'pets' is a table containing all your pet objects
-    local pets = getAllPets()  -- Replace with actual function to get all pets
-    local breakables = getAllBreakables()  -- Replace with actual function to get all breakable objects
-
-    for _, pet in ipairs(pets) do
-        for _, breakable in ipairs(breakables) do
-            -- Assuming each pet has a method to move to a target
-            pet:moveTo(breakable.position)  -- Replace with actual method to move the pet
-            pet:break(breakable)  -- Replace with actual method to break the object
-        end
-    end
-end
-
--- Function to get all pets (placeholder)
-function getAllPets()
-    -- Replace with actual logic to retrieve your pets
-    return {}
-end
-
--- Function to get all breakable objects (placeholder)
-function getAllBreakables()
-    -- Replace with actual logic to retrieve breakable objects
-    return {}
-end
-
--- Call the function to send pets to break breakables
-sendPetsToBreakables())
-   -- The function that takes place when the button is pressed
    end,
 })
